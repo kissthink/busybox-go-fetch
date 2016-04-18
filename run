@@ -1,2 +1,4 @@
 #!/bin/sh
-docker run --rm ontouchstart/busybox-go-fetch http://gopl.io
+CERT_DIR=/etc/ssl/certs
+URL=https://raw.githubusercontent.com/adonovan/gopl.io/master/ch1/fetch/main.go
+docker run -v $CERT_DIR:$CERT_DIR --rm ontouchstart/busybox-go-fetch $URL
