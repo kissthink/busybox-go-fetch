@@ -1,0 +1,2 @@
+#!/bin/sh
+docker run --rm ontouchstart/busybox-go-fetch http://gopl.io

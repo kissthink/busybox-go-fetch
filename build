@@ -1,0 +1,4 @@
+#!/bin/sh
+docker run --rm -e CGO_ENABLED=0 -v $(pwd):/home -it ontouchstart/alpine-go build -o /home/bin/run /home/main.go 
+docker build -t ontouchstart/busybox-go-fetch .
+./run | tee busybox-go-fetch.log
